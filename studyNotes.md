@@ -41,9 +41,9 @@ app.listen(function(){
 *****************************
 ###   `app.js` - 
 
-`There are four folders: Ill use mnemonics to remember the folders`
+`There are four folders inside app.js: Ill use mnemonics to remember the folders`
 
-mnemonic = `PURO COMO` = as pure...
+mnemonic = `PURO COMO` = as pure... (in Spanish)
 
 PURO COMO:
 
@@ -54,12 +54,23 @@ RO | router
 CO  | config
 MO | model
 
-### Task List Syntax
-1. [x] I can render checkbox list syntax
-	* [x] I support nesting
-	* [x] I support ordered *and* unordered lists
-2. [ ] I don't support clicking checkboxes directly in the html window
+### Public
+1. [x] index.html
+	* [x] main templates
+	
+2. [x] layout folder
+       * [x]main.handlebars
+       
+3. [x] js folder
+       * [x]index.js
+       * [x]logic to the applciation using javascirpt or jquery
 
+3. [x] css folder
+       * [x]index.css
+       * [x]style the pages
+       
+
+       
 
 `public`
 --views/layouts
