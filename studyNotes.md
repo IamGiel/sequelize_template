@@ -1,46 +1,65 @@
-`A full stack app set -up`
+# ** A full stack app folder organization.
 
-`server.js` - contains the connection set-up.  Inisde usually we have the dependencies.
+###   `server.js` - 
+  
+  contains the connection set-up.  Inisde usually we have the dependencies.
 we will see:
 
-<!-- dependencies -->
+```
+--dependencies
 var express = require ('express');
 var bodyParser = require('body-parser');
-
+```
+```
 <!-- set up the express app -->
 var app = express();
 var PORT = process.env.PORT || 8080;
-
+```
+```
 <!--  express app bodyParser -->
 <!-- see documentation usually and data acquired in `req.body` -->
 app.use(bodyParser.json); 
-
+```
+```
 <!-- static directory -->
 <!-- this is for the css/html templates -->
 app.use(express.static(pathTo/fileName))
-
+```
+```
 <!-- routing -->
 require('path/To/API_ROUTE.js')(app);
 require('path/To/HTML_ROUTE.js')(app);
+```
 
-
-
+```
 <!-- port listening to... -->
 app.listen(function(){
 	console.log("listening on PORT: " + 8080)
 })
+```
 
 *****************************
-`Inside the app.js`
+###   `app.js` - 
 
-`Ill use mnemonics to remember to organize my folders`
+`There are four folders: Ill use mnemonics to remember the folders`
 
-mnemonic = PURO COMO = as pure...
+mnemonic = `PURO COMO` = as pure...
 
-PU = public
-RO = routes
-CO = config
-MO = model
+PURO COMO:
+
+ACRONYMS  | STANDS FOR
+------------- | -------------
+PU  | public
+RO | router
+CO  | config
+MO | model
+
+### Task List Syntax
+1. [x] I can render checkbox list syntax
+	* [x] I support nesting
+	* [x] I support ordered *and* unordered lists
+2. [ ] I don't support clicking checkboxes directly in the html window
+
 
 `public`
 --views/layouts
