@@ -14,8 +14,8 @@ $.get("/api/books/short", function(data) {
 
     // Now  we add our book data to the well we just placed on the page
     $("#book-well-" + i).append("<h2>" + (i + 1) + ". " + data[i].title + "</h2>");
-    $("#book-well-" + i).append("<h3>Author: " + data[i].author + "</h4>");
-    $("#book-well-" + i).append("<h3>Genre: " + data[i].genre + "</h4>");
-    $("#book-well-" + i).append("<h3>Pages: " + data[i].pages + "</h4>");
+    $("#book-well-" + i).append("<h3>Author: " + data[i].author + "</h3>");
+    $("#book-well-" + i).append("<h3>Genre: " + data[i].genre + "</h3>");
+    $("#book-well-" + i).append("<h3>Pages: " + data[i].pages + "</h3>");
   }
 });
