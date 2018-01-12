@@ -53,21 +53,86 @@ PU  | public
 RO | router
 CO  | config
 MO | model
+add DB| database (schema.sql and Seed.sql)
 
 ### Public
 1. [x] index.html
+
 	* [x] main templates
 	
+	
 2. [x] layout folder
+
        * [x]main.handlebars
        
+       
 3. [x] js folder
+
        * [x]index.js
+       
        * [x]logic to the applciation using javascirpt or jquery
+       
 
 3. [x] css folder
+
        * [x]index.css
+       
        * [x]style the pages
+       
+       
+### Router
+ 1. [x] HTML_router.js
+
+	* [x] contains the root routes of each html files
+	
+	###example: 
+	
+	===We will require path===
+	 `var path = require('path');
+	
+	===We will put all codes inside module.exports =  function(app)===
+	
+	       `module.exports = function(app){
+	           // Each of the below routes just handles the HTML page that the user gets sent to.
+
+                // index route loads view.html
+                
+                app.get("/", function(req, res) {
+                res.sendFile(path.join(__dirname, "../public/view.html"));
+                 });
+
+                // add route loads the add.html page, where users can enter new books to the db
+                
+                app.get("/add", function(req, res) {
+                res.sendFile(path.join(__dirname, "../public/add.html"));
+                 });
+
+                 // all route loads the all.html page, where all books in the db are displayed
+                 
+                app.get("/all", function(req, res) {
+                res.sendFile(path.join(__dirname, "../public/all.html"));
+                });
+
+                // short route loads the short.html page, where short books in the db are displayed
+                app.get("/short", function(req, res) {
+                res.sendFile(path.join(__dirname, "../public/short.html"));
+                });
+
+                // long route loads the long.html page, where long books in the db are displayed
+                app.get("/long", function(req, res) {
+                res.sendFile(path.join(__dirname, "../public/long.html"));
+                 });
+
+                };
+
+	       }
+	
+	```
+
+2. [x] API_router.js
+
+	* [x] main templates
+
        
 
        
